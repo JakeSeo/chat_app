@@ -1,4 +1,5 @@
 import 'package:chat_app/screens/welcome/welcome_screen.dart';
+import 'package:chat_app/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      theme: lightThemeData(context),
+      darkTheme: darkThemeData(context),
+      // By default themeMode is ThemeMode.system
+      themeMode: ThemeMode.system,
       home: WelcomeScreen(),
     );
   }
